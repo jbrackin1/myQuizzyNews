@@ -1,6 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
+import CountDownPage from './components/CountDownPage';
+// import PropTypes from 'prop-types';
+// import CountDownCircleTimer from 'react-native-countdown-circle-timer';
 
 export default function App() {
 
@@ -41,7 +44,11 @@ export default function App() {
         <Text style={ styles.bottomText }>ABOUT</Text>
         <Text style={ [styles.bottomText, {marginBottom: 20}] }>Ⓒ 2022 EMISQWE</Text>
       </View>
+      <CountDownPage />
+
     </View>
+   
+    
   );
 }
 
