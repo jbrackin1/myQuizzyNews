@@ -10,19 +10,14 @@ export default function App() {
 
 
   return (
-    // <View style={styles.screenContainer}>
-      <HomePage style={styles.screenContainer}/>
+   
+      <HomePage />
 
     
   );
 }
 
 const styles = StyleSheet.create({
-  screenContainer: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-  },
+
  
 });
