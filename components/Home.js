@@ -24,34 +24,34 @@ export default function Home(){
       }
     return (
 
+    <View style={styles.screenContainer}>
+            <View style={styles.topContainer}>
+                <Text style={styles.topTextPrimary}>QUIZZY.NEWS</Text>
+            </View>
+            <View style={styles.secondContainer}>
+                <Text style={styles.topTextSecondary}>a daily quiz game on current events</Text>
+                <Text style={styles.topTextSecondary}>from stories published very recently</Text>
+            </View>
+        <View style={styles.middleContainer}>
+            <Text style={styles.middleText}>Ready?</Text>
+            <Pressable style={styles.playButton}>
+            <Text style={styles.playButtonText}>PLAY</Text>
+            </Pressable>        
+        </View>
+            <View
+            style={{
+            borderBottomColor: '#909090',
+            borderBottomWidth: StyleSheet.hairlineWidth,
+            marginBottom: 15,
+            }}
+            />
+        <View style={styles.bottomContainer}>
+            <Text style={ styles.bottomText }>QUIZZY.NEWS</Text>
+            <Text style={ styles.bottomText }>ABOUT</Text>
+            <Text style={ [styles.bottomText, {marginBottom: 20}] }>Ⓒ 2022 EMISQWE</Text>
+        </View>
 
-        <View>
-    <View style={styles.topContainer}>
-<Text style={styles.topTextPrimary}>QUIZZY.NEWS</Text>
-</View>
-<View style={styles.secondContainer}>
-<Text style={styles.topTextSecondary}>a daily quiz game on current events</Text>
-<Text style={styles.topTextSecondary}>from stories published very recently</Text>
-</View>
-<View style={styles.middleContainer}>
-<Text style={styles.middleText}>Ready?</Text>
-<Pressable style={styles.playButton}>
-  <Text style={styles.playButtonText}>PLAY</Text>
-</Pressable>        
-</View>
-<View
-style={{
-borderBottomColor: '#909090',
-borderBottomWidth: StyleSheet.hairlineWidth,
-marginBottom: 15,
-}}
-/>
-<View style={styles.bottomContainer}>
-<Text style={ styles.bottomText }>QUIZZY.NEWS</Text>
-<Text style={ styles.bottomText }>ABOUT</Text>
-<Text style={ [styles.bottomText, {marginBottom: 20}] }>Ⓒ 2022 EMISQWE</Text>
-</View>
-</View>
+    </View>
 )};
 
 const styles = StyleSheet.create({
@@ -122,4 +122,5 @@ const styles = StyleSheet.create({
       color: '#909090', 
       marginLeft: 40
     },
+
   });
