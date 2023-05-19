@@ -2,48 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import CountDownPage from './components/CountDownPage';
+import HomePage from './components/Home';
 // import PropTypes from 'prop-types';
 // import CountDownCircleTimer from 'react-native-countdown-circle-timer';
 
 export default function App() {
 
-  const [loaded] = useFonts({
-    KGHappy: require('./assets/fonts/KGHAPPY.ttf'),
-    Lexend: require('./assets/fonts/Lexend-VariableFont_wght.ttf'),
-    Jost: require('./assets/fonts/Jost-VariableFont_wght.ttf'),
-  });
-
-  if (!loaded) {
-    return null;
-  }
 
   return (
     <View style={styles.screenContainer}>
-      <View style={styles.topContainer}>
-        <Text style={styles.topTextPrimary}>QUIZZY.NEWS</Text>
-      </View>
-      <View style={styles.secondContainer}>
-        <Text style={styles.topTextSecondary}>a daily quiz game on current events</Text>
-        <Text style={styles.topTextSecondary}>from stories published very recently</Text>
-      </View>
-      <View style={styles.middleContainer}>
-        <Text style={styles.middleText}>Ready?</Text>
-        <Pressable style={styles.playButton}>
-          <Text style={styles.playButtonText}>PLAY</Text>
-        </Pressable>        
-      </View>
-      <View
-  style={{
-    borderBottomColor: '#909090',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    marginBottom: 15,
-  }}
-/>
-      <View style={styles.bottomContainer}>
-        <Text style={ styles.bottomText }>QUIZZY.NEWS</Text>
-        <Text style={ styles.bottomText }>ABOUT</Text>
-        <Text style={ [styles.bottomText, {marginBottom: 20}] }>Ⓒ 2022 EMISQWE</Text>
-      </View>
+      <HomePage />
       <CountDownPage />
 
     </View>
