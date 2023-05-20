@@ -1,18 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
+import {createAppContainer} from '@react-navigation/native'
 
-// const [loaded] = useFonts({
-//     KGHappy: require('./assets/fonts/KGHAPPY.ttf'),
-//     Lexend: require('./assets/fonts/Lexend-VariableFont_wght.ttf'),
-//     Jost: require('./assets/fonts/Jost-VariableFont_wght.ttf'),
-//   });
 
-//   if (!loaded) {
-//     return null;
-//   }
-
-export default function Home(){
+export default function Home({navigation}){
     const [loaded] = useFonts({
         KGHappy: require('../assets/fonts/KGHAPPY.ttf'),
         Lexend: require('../assets/fonts/Lexend-VariableFont_wght.ttf'),
@@ -21,6 +14,10 @@ export default function Home(){
     
       if (!loaded) {
         return null;
+      }
+
+      const pressHandler = () => {
+        navigation.navigate('CountDownPage')
       }
     return (
 
@@ -34,7 +31,7 @@ export default function Home(){
             </View>
         <View style={styles.middleContainer}>
             <Text style={styles.middleText}>Ready?</Text>
-            <Pressable style={styles.playButton}>
+            <Pressable style={styles.playButton} onPress={pressHandler}>
             <Text style={styles.playButtonText}>PLAY</Text>
             </Pressable>        
         </View>
