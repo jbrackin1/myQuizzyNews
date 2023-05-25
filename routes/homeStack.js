@@ -1,8 +1,8 @@
 import {createStackNavigator } from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
-import Home from '../components/Home'
-import CountDownPage from '../components/CountDownPage';
-
+import Home from '../pages/Home'
+import CountDownPage from '../pages/CountDownPage';
+import GamePage from '../pages/GamePage';
 
 const screens = {
     Home: {
@@ -10,6 +10,9 @@ const screens = {
     },
     CountDownPage: {
         screen: CountDownPage
+    },
+    GamePage: {
+        screen: GamePage
     }
 }
 

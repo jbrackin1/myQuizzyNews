@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createAppContainer} from '@react-navigation/native'
 
 
+
 export default function Home({navigation}){
     const [loaded] = useFonts({
         KGHappy: require('../assets/fonts/KGHAPPY.ttf'),

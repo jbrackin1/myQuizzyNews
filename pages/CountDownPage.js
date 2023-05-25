@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function CountDownPage({ navigation }) {
   useEffect(() => {
     const timeout = setTimeout(() => {
-      navigation.navigate('Home');
+      navigation.navigate('GamePage');
     }, 3000);
 
     // Clean up the timeout when the component is unmounted or the effect is re-run
@@ -28,9 +28,11 @@ export default function CountDownPage({ navigation }) {
 
 const styles = StyleSheet.create({
   timer: {
+    backgroundColor: '#DED1E4',
     display: 'flex',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    
   },
 });
