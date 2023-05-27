@@ -16,9 +16,9 @@ export default function CountDownPage({ navigation }) {
     <View style={styles.timer}>
       <CountdownCircleTimer
         isPlaying
-        duration={7}
+        duration={3}
         colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-        colorsTime={[7, 5, 2, 0]}
+        colorsTime={[3, 2, 1, 0]}
       >
         {({ remainingTime }) => <Text>{remainingTime}</Text>}
       </CountdownCircleTimer>
