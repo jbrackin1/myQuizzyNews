@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 
+
 export default function GamePage() {
   const [georgePressed, setGeorgePressed] = useState(false);
   const [button1Pressed, setButton1Pressed] = useState(false);
   const [button2Pressed, setButton2Pressed] = useState(false);
+
 
   const handlePress = (button) => {
     if (button === 'George') {
